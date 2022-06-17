@@ -14,4 +14,6 @@ function onTimeUpdate(event) {
   localStorage.setItem(STORAGE_KEY, time);
 }
 
-player.setCurrentTime(previousTime).then().catch();
+if (previousTime) {
+  player.setCurrentTime(previousTime).then().catch();
+}
