@@ -29,6 +29,9 @@ function onFormSubmit(event) {
   event.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
   console.log(formData);
+  for (const key in formData) {
+    delete formData[key];
+}
 }
 
 function populateFormOnReset() {
